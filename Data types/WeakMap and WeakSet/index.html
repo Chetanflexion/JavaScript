@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeakMap and WeakSet</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+
+    <script>
+        const pets = new WeakSet();
+        const cat = { name: "fluffy" };
+        const dog = { name: "badger" };
+
+        pets.add(cat);
+        pets.add(dog);
+
+        pets.has(cat);    // true
+        pets.has(dog);    // true
+
+        pets.delete(cat); // removes cat from the set
+        pets.has(cat);    // false, cat has been removed
+        pets.has(dog);    // true, dog is retained
+
+
+        const wm1 = new WeakMap();
+        const wm2 = new WeakMap();
+
+        const obj1 = {};
+        const obj2 = window;
+
+        wm1.set(obj1, 100);
+        wm1.set(obj2, 'Hello');
+        wm2.set(obj1, obj2); // You can set the value to be anything including an object or function
+        wm2.set(obj2, undefined); // Or, undefined
+        wm1.set(wm2, wm1); // Or, even a WeakMap itself
+
+        wm1.get(obj1); // 100
+
+        wm1.has(obj1); // true
+        wm1.delete(obj1);
+        wm1.has(obj1); // false
+    </script>
+</body>
+
+</html>

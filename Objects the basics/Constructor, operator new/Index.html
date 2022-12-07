@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor, operator "new"</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+
+    <script>
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+        
+        console.log(car1);
+        console.log(car1.make);
+        console.log(car1.model);
+        console.log(car1.year);
+
+        const car1 = new Car('Eagle', 'Talon TSi', 1993);
+
+        console.log(car1);
+        console.log(car1.make);
+        console.log(car1.model);
+        console.log(car1.year);
+
+    </script>
+</body>
+
+</html>

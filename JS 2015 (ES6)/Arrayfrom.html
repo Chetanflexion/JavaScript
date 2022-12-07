@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array.from()</title>
+</head>
+<body>
+    <h2>JavaScript Arrays</h2>
+    <p>The Array.form() method returns an Array object form any object with a length property or any iterable object.</p>
+    <p id="demo"></p>
+
+    <script>
+        const myArr = Array.from("ABCDEFG");
+        document.getElementById("demo").innerHTML = myArr;
+    </script>
+
+    <p>The Array.form() method is not supported in Internet Explorer.</p>
+</body>
+</html>
