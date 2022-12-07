@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving the mouse mouseoverout, mouseenterleave</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+            float: left;
+            padding: 30px;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        p {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+
+    <h3>This example demonstrates the difference between onmousemove, onmouseleave and onmouseout.</h3>
+
+    <p>The onmousemove event occurs every time the mouse pointer is moved over the div element.</p>
+    <p>The mouseleave event only occurs when the mouse pointer is moved out of the div element. </p>
+    <p>The onmouseout event occurs when the mouse pointer is moved out of the div element, and when it
+        leaves its child elements (p and span).</p>
+
+    <div onmousemove="myMoveFunction()">
+        <p>onmousemove: <br> <span id="demo">Mouse over and leave me!</span></p>
+    </div>
+
+    <div onmouseleave="myLeaveFunction()">
+        <p>onmouseleave: <br> <span id="demo2">Mouse over and leave me!</span></p>
+    </div>
+
+    <div onmouseout="myOutFunction()">
+        <p>onmouseout: <br> <span id="demo3">Mouse over and leave me!</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
